@@ -5,7 +5,7 @@
 	*python os.stat(dir) 不能正常显示中文文件
  
 =
-	![image](https://github.com/fish267/file_info_checker/blob/master/screen.png)
+	![](https://github.com/fish267/file_info_checker/blob/master/screen.png)
 tkinter-cal
 ===========
 
