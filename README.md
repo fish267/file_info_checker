@@ -1,7 +1,7 @@
 文件查看器
 ==========
 
-练习Python　OS 和Tkinter模块
+练习Python os和Tkinter模块
 
 其中存在的问题:
 ===============
