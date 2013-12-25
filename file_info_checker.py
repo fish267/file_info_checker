@@ -3,7 +3,7 @@
 from Tkinter import *
 import os
 import time
-
+import tkMessageBox
 # 当前路径
 currentDir = os.getcwd()
 
@@ -76,13 +76,21 @@ def showFileProperties(event):
 		file_information_message['text'] = ''
 def format_time(stime):
 	return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(stime))
+def aboutMessage():
+	about_text = '一个跨平台的文件属性查看器'
+	tkMessageBox.showinfo('关于查看器', about_text)
+#	pass
 # 设置UI, 没有使用类，结构化顺序编写的
 def main():
 	root = Tk()
 	root.title('文件信息查看器')
+	root.geometry('580x380+400+300')
 	# 快捷键退出
 	root.bind('<Control-q>', sys.exit)
-
+	# add an About Button
+	menu = Menu(root)
+	menu.add_command(label = '关于', command = aboutMessage)
+	root['menu'] = menu
 	global file_information_message
 	global listboxDir
 	global listboxFile
